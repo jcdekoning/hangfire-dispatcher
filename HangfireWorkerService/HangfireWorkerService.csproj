@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-HangfireWorkerService-566BDE11-F994-4D62-93E5-540EEBFC4908</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Hangfire.AspNetCore" Version="1.7.28" />
+	  <PackageReference Include="Hangfire.Core" Version="1.7.28" />
+	  <PackageReference Include="Hangfire.SqlServer" Version="1.7.28" />
+	  <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HangfireCommon\HangfireCommon.csproj" />
+    <ProjectReference Include="..\HangfireContracts\HangfireContracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Jobs\" />
+  </ItemGroup>
+</Project>
